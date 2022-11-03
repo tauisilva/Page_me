@@ -88,6 +88,12 @@ a{
     background-color: var(--texto);
     transition: all 0.3s ease-in-out;
 }
+.container{
+    padding: 5rem;
+}
+section{
+    text-align: center;
+}
 
 @media (max-width:768px) {
     .hamburguer{
