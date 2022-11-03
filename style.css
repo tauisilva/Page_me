@@ -1,6 +1,124 @@
-body{
+*{
     margin: 0;
-}
-body *{
+    padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: #DEEFE7;
+}
+
+header{
+    background: #B4BEC9;
+}
+li{
+    list-style: none;
+}
+a{
+    color: #002333;
+    text-decoration: none;
+}
+.navbar{
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap:60px;
+}
+.nav-link{
+    transition: 0.5s ease;
+}
+.nav-link:hover{
+    color: #FFFFFF;
+
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #dbefff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.icon::before{
+    content: "\f186";
+    font-family: fontAwesome;
+    color: #101026;
+    font-size: 20px;
+}
+.hamburguer{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width:768px) {
+    .hamburguer{
+        display: block;
+    }
+    .hamburguer.active .bar:nth-child(1){
+       transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: #101026;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+    
+}
+
+
+/*Dark mode*/
+
+.body.dark{
+    background: #202026;
+}
+.header.dark{
+    background: #202026;
+}
+.header.dark .icon::before{
+    content: "\f185";
+}
+.header.dark .navbar a{
+    color: #fff;
 }
