@@ -7,10 +7,12 @@
 
 body{
     background: #DEEFE7;
+    transition: background 0.5s;
 }
 
 header{
     background: #B4BEC9;
+    transition: background 0.5s;
 }
 li{
     list-style: none;
@@ -33,7 +35,7 @@ a{
 .nav-menu{
     display: flex;
     align-items: center;
-    gap:60px;
+    gap:60px;    
 }
 .nav-link{
     transition: 0.5s ease;
@@ -97,6 +99,7 @@ a{
         flex-direction: column;
         width: 100%;
         transition: 0.3s;
+        padding: 15px;
     }
     .nav-item{
         margin: 16px 0;
@@ -111,7 +114,7 @@ a{
 /*Dark mode*/
 
 .body.dark{
-    background: #202026;
+    background: #B4BEC9;
 }
 .header.dark{
     background: #202026;
@@ -121,4 +124,7 @@ a{
 }
 .header.dark .navbar a{
     color: #fff;
+}
+.header.dark .nav-menu{
+    background-color: #202026;
 }
