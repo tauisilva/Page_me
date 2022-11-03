@@ -5,20 +5,34 @@
     font-family: sans-serif;
 }
 
+:root{
+    --fundo: #DEEFE7;
+    --texto: #002333;
+    --cabecalho: #B4BEC9;
+    --icone: #101026;
+    --iconeFundo: #dbefff;
+}
+.modoEscuro:root{
+    --fundo: #B4BEC9;
+    --texto: #fff;
+    --cabecalho: #202026;
+    --icone: #101026;
+    --iconeFundo: #dbefff;
+}
 body{
-    background: #DEEFE7;
+    background: var(--fundo);
     transition: background 0.5s;
 }
 
 header{
-    background: #B4BEC9;
+    background: var(--cabecalho);
     transition: background 0.5s;
 }
 li{
     list-style: none;
 }
 a{
-    color: #002333;
+    color: var(--texto);
     text-decoration: none;
 }
 .navbar{
@@ -41,14 +55,14 @@ a{
     transition: 0.5s ease;
 }
 .nav-link:hover{
-    color: #FFFFFF;
+    color: var(--texto);
 
 }
 .icon{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #dbefff;
+    background-color: var(--iconeFundo);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -58,7 +72,7 @@ a{
 .icon::before{
     content: "\f186";
     font-family: fontAwesome;
-    color: #101026;
+    color: var(--icone);
     font-size: 20px;
 }
 .hamburguer{
@@ -71,7 +85,7 @@ a{
     height: 3px;
     border-radius: 2px;
     margin: 5px auto;
-    background-color: #fff;
+    background-color: var(--texto);
     transition: all 0.3s ease-in-out;
 }
 
@@ -94,7 +108,7 @@ a{
         top: 70px;
         gap: 0;
         border-radius: 0 0 20px 20px;
-        background-color: #B4BEC9;
+        background-color: var(--cabecalho);
         text-align: center;
         flex-direction: column;
         width: 100%;
@@ -111,21 +125,3 @@ a{
     
 }
 
-
-/*Dark mode*/
-
-.body.dark{
-    background: #B4BEC9;
-}
-.header.dark{
-    background: #202026;
-}
-.header.dark .icon::before{
-    content: "\f185";
-}
-.header.dark .navbar a{
-    color: #fff;
-}
-.header.dark .nav-menu{
-    background-color: #202026;
-}
