@@ -1,41 +1,59 @@
 *{
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
 }
-
+/*cores*/
 :root{
-    --fundo: #DEEFE7;
-    --texto: #002333;
-    --cabecalho: #B4BEC9;
-    --icone: #101026;
-    --iconeFundo: #dbefff;
-    --blackWhite: #FFF;
+    
+    --fundo: #FFF;
+    --textoPrimario: #262626;
+    --textoSecundario: #ACACAC;
+    --primeiroPlano: #FFF;
+
+    --color-background: #f6f6f9;
+    --color-white: #fff;
+    --color-dark: #363949;
+    --color-dark-variant: #677483;
+    --color-light: rgba(132,139,200,0.18);
+    --box-shadow: 0 2rem 3rem var(--color-light);
 }
 .modoEscuro:root{
-    --fundo: #B4BEC9;
-    --texto: #fff;
-    --cabecalho: #202026;
-    --icone: #101026;
-    --iconeFundo: #dbefff;
-    --blackWhite: #000;
+    --fundo: #000;
+    --textoPrimario: #EEEEEE;
+    --textoSecundario: #A7A6A6;
+    --primeiroPlano: #363636;
+
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0,0,0,0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
 }
+/*cores*/
+
 body{
-    background: var(--fundo);
+    background: var(--color-background);
     transition: background 0.5s;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
 }
 
+/*cabeçalho*/
 header{
-    background: var(--cabecalho);
+    background: var(--color-background);
     transition: background 0.5s;
+    box-shadow: var(--box-shadow);
 }
 li{
     list-style: none;
 }
 a{
-    color: var(--texto);
+    color: var(--textoPrimario);
     text-decoration: none;
 }
 .navbar{
@@ -58,14 +76,14 @@ a{
     transition: 0.5s ease;
 }
 .nav-link:hover{
-    color: var(--texto);
+    color: var(--textoSecundario);
 
 }
 .icon{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: var(--iconeFundo);
+    background-color: var(--color-dark);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -75,8 +93,9 @@ a{
 .icon::before{
     content: "\f186";
     font-family: fontAwesome;
-    color: var(--icone);
+    color: var(--textoSecundario);
     font-size: 20px;
+    transition: background 0.5s;
 }
 .hamburguer{
     display: none;
@@ -88,145 +107,54 @@ a{
     height: 3px;
     border-radius: 2px;
     margin: 5px auto;
-    background-color: var(--texto);
+    background-color: var(--textoPrimario);
     transition: all 0.3s ease-in-out;
 }
-.container{
-    padding: 5rem;
+
+main.cards{
+    display: flex;
+    padding: 32px;    
+    justify-content: center;
+}
+main.cards section.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 32px;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+}
+
+main.cards section.card:first-child{
+    margin-left: 0;
+}
+
+main.cards section.card h3{
+    font-size: 100%;
+    margin: 16px 0;
+    color: var(--textoPrimario);
+}
+main.cards section.card span{
+   font-weight: 300;
+   max-width: 240px;
+   font-size: 80%;
+   margin-bottom: 16px;
+   color: var(--textoSecundario);
+}
+main.cards section.card button{
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 800;
 }
 
 
-/*cards*/
-.projetos{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #EFEFEF;
-}
-.slide-container{
-  max-width: 1120px;
-  width: 100%;
-  padding: 40px 0;
-}
-.slide-content{
-  margin: 0 40px;
-  overflow: hidden;
-  border-radius: 25px;
-}
-.card{
-  border-radius: 25px;
-  background-color: #FFF;
-}
-.image-content,
-.card-content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 14px;
-}
-.image-content{
-  position: relative;
-  row-gap: 5px;
-  padding: 25px 0;
-}
-.overlay{
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #4070F4;
-  border-radius: 25px 25px 0 25px;
-}
-.overlay::before,
-.overlay::after{
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: -40px;
-  height: 40px;
-  width: 40px;
-  background-color: #4070F4;
-}
-.overlay::after{
-  border-radius: 0 25px 0 0;
-  background-color: #FFF;
-}
-.card-image{
-  position: relative;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  background: #FFF;
-  padding: 3px;
-}
-.card-image .card-img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #4070F4;
-}
-.name{
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-}
-.description{
-  font-size: 14px;
-  color: #707070;
-  text-align: center;
-}
-.button{
-  border: none;
-  font-size: 16px;
-  color: #FFF;
-  padding: 8px 16px;
-  background-color: #4070F4;
-  border-radius: 6px;
-  margin: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.button:hover{
-  background: #265DF2;
-}
-
-.swiper-navBtn{
-  color: #6E93f7;
-  transition: color 0.3s ease;
-}
-.swiper-navBtn:hover{
-  color: #4070F4;
-}
-.swiper-navBtn::before,
-.swiper-navBtn::after{
-  font-size: 35px;
-}
-.swiper-button-next{
-  right: 0;
-}
-.swiper-button-prev{
-  left: 0;
-}
-.swiper-pagination-bullet{
-  background-color: #6E93f7;
-  opacity: 1;
-}
-.swiper-pagination-bullet-active{
-  background-color: #4070F4;
-}
-
-@media screen and (max-width: 768px) {
-  .slide-content{
-    margin: 0 10px;
-  }
-  .swiper-navBtn{
-    display: none;
-  }
-}
-
-/*cards*/
 @media (max-width:768px) {
     .hamburguer{
         display: block;
@@ -246,7 +174,7 @@ a{
         top: 70px;
         gap: 0;
         border-radius: 0 0 20px 20px;
-        background-color: var(--cabecalho);
+        background-color: var(--color-background);
         text-align: center;
         flex-direction: column;
         width: 100%;
@@ -260,6 +188,18 @@ a{
     .nav-menu.active{
         left: 0;
     }
-    
+    main.cards{
+        flex-direction: column;
+    }
+    main.cards section.card{
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+    main.cards section.card:last-child{
+        margin-bottom: 0;
+    }
+    main.cards section.card button{
+        font-size: 70%;
+    }
 }
-
+/*cabeçalho*/
