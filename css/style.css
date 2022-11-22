@@ -116,16 +116,19 @@ section.info{
 section.about{
     display: flex;
     border-radius: 8px;
+    
     background-color: var(--color-white);
     box-shadow: var(--box-shadow);
 }
 section.about section.descricao{
     width: 50%;
     padding: 1rem 1.5rem;
+    text-align: center;
 }
 section.about section.foto{
     width: 50%;
     padding: 1rem 1.5rem;
+    text-align: center;
 }
 section.about section.descricao h1{
     font-size: 100%;
@@ -224,8 +227,11 @@ section.cards section.card button{
     .nav-menu.active{
         left: 0;
     }
-    section.about{
-        flex-direction: column;
+    section.about section.foto{
+        display: none !important;
+    }
+    section.descricao{
+        width: 100% !important;
     }
     section.cards{
         flex-direction: column;
