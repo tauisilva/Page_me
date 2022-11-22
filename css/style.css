@@ -19,7 +19,7 @@
     --color-dark: #363949;
     --color-dark-variant: #677483;
     --color-light: rgba(132,139,200,0.18);
-    --box-shadow: 0 2rem 3rem var(--color-light);
+    --box-shadow: 0 1rem 2rem var(--color-light);
 }
 .modoEscuro:root{
     --fundo: #000;
@@ -32,7 +32,7 @@
     --color-dark: #edeffd;
     --color-dark-variant: #a3bdcc;
     --color-light: rgba(0,0,0,0.4);
-    --box-shadow: 0 2rem 3rem var(--color-light);
+    --box-shadow: 0 1rem 2rem var(--color-light);
 }
 /*cores*/
 
@@ -110,13 +110,49 @@ a{
     background-color: var(--textoPrimario);
     transition: all 0.3s ease-in-out;
 }
-
-main.cards{
+section.info{
+    padding: 32px;
+}
+section.about{
+    display: flex;
+    border-radius: 8px;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+}
+section.about section.descricao{
+    width: 50%;
+    padding: 1rem 1.5rem;
+}
+section.about section.foto{
+    width: 50%;
+    padding: 1rem 1.5rem;
+}
+section.about section.descricao h1{
+    font-size: 100%;
+    color: var(--textoPrimario);
+    padding: 0 0 1rem 0;
+}
+section.about section.descricao p{
+    font-size: 100%;
+    color: var(--textoSecundario);
+    padding: 0 0 1rem;
+}
+section.about section.foto h1{
+    font-size: 100%;
+    color: var(--textoPrimario);
+    padding: 0 0 1rem;
+}
+section.about section.foto h3{
+    font-size: 100%;
+    color: var(--textoSecundario);
+    padding: 0 0 1rem;
+}
+section.cards{
     display: flex;
     padding: 32px;    
     justify-content: center;
 }
-main.cards section.card{
+section.cards section.card{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,23 +165,23 @@ main.cards section.card{
     box-shadow: var(--box-shadow);
 }
 
-main.cards section.card:first-child{
+section.cards section.card:first-child{
     margin-left: 0;
 }
 
-main.cards section.card h3{
+section.cards section.card h3{
     font-size: 100%;
     margin: 16px 0;
     color: var(--textoPrimario);
 }
-main.cards section.card span{
+section.cards section.card span{
    font-weight: 300;
    max-width: 240px;
    font-size: 80%;
    margin-bottom: 16px;
    color: var(--textoSecundario);
 }
-main.cards section.card button{
+section.cards section.card button{
     padding: 0.5rem 1rem;
     text-transform: uppercase;
     border-radius: 32px;
@@ -188,17 +224,20 @@ main.cards section.card button{
     .nav-menu.active{
         left: 0;
     }
-    main.cards{
+    section.about{
         flex-direction: column;
     }
-    main.cards section.card{
+    section.cards{
+        flex-direction: column;
+    }
+    section.cards section.card{
         margin-left: 0;
         margin-bottom: 32px;
     }
-    main.cards section.card:last-child{
+    section.cards section.card:last-child{
         margin-bottom: 0;
     }
-    main.cards section.card button{
+    section.cards section.card button{
         font-size: 70%;
     }
 }
