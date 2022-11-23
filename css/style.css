@@ -87,8 +87,7 @@ a{
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center; 
 }
 .icon::before{
     content: "\f186";
@@ -111,12 +110,11 @@ a{
     transition: all 0.3s ease-in-out;
 }
 section.info{
-    padding: 32px;
+    padding: 32px 5%;
 }
 section.about{
     display: flex;
-    border-radius: 8px;
-    
+    border-radius: 8px;    
     background-color: var(--color-white);
     box-shadow: var(--box-shadow);
 }
@@ -195,6 +193,9 @@ section.cards section.card button{
 
 
 @media (max-width:768px) {
+    nav.navbar a.logo{
+        font-size: 1.5rem;
+    }
     .hamburguer{
         display: block;
     }
@@ -207,8 +208,14 @@ section.cards section.card button{
     .hamburguer.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
+    ul.icones{
+        display: flex;        
+    }
+    ul.icones li.icon{
+        margin-right: 1rem;
+    }
     .nav-menu{
-        position: fixed;
+        position: absolute;
         left: -100%;
         top: 70px;
         gap: 0;
@@ -220,6 +227,7 @@ section.cards section.card button{
         transition: 0.3s;
         padding: 15px;
         transition: background-color 0.5s;
+        box-shadow: var(--box-shadow);
     }
     .nav-item{
         margin: 16px 0;
@@ -227,10 +235,11 @@ section.cards section.card button{
     .nav-menu.active{
         left: 0;
     }
-    section.about section.foto{
-        display: none !important;
+    section.about{
+        flex-direction: column;
     }
-    section.descricao{
+     section.descricao,
+     section.foto{
         width: 100% !important;
     }
     section.cards{
