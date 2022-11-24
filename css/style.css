@@ -8,25 +8,10 @@
 }
 /*cores*/
 :root{
-    
-    --fundo: #FFF;
-    --textoPrimario: #262626;
-    --textoSecundario: #ACACAC;
-    --primeiroPlano: #FFF;
-
-    --color-background: #f6f6f9;
-    --color-white: #fff;
-    --color-dark: #363949;
-    --color-dark-variant: #677483;
-    --color-light: rgba(132,139,200,0.18);
-    --box-shadow: 0 1rem 2rem var(--color-light);
-}
-.modoEscuro:root{
     --fundo: #000;
     --textoPrimario: #EEEEEE;
     --textoSecundario: #A7A6A6;
     --primeiroPlano: #363636;
-
     --color-background: #181a1e;
     --color-white: #202528;
     --color-dark: #edeffd;
@@ -34,8 +19,21 @@
     --color-light: rgba(0,0,0,0.4);
     --box-shadow: 0 1rem 2rem var(--color-light);
 }
-/*cores*/
+.modoClaro:root{
+    
+    --fundo: #FFF;
+    --textoPrimario: #262626;
+    --textoSecundario: #ACACAC;
+    --primeiroPlano: #FFF;
+    --color-background: #f6f6f9;
+    --color-white: #fff;
+    --color-dark: #363949;
+    --color-dark-variant: #677483;
+    --color-light: rgba(132,139,200,0.18);
+    --box-shadow: 0 1rem 2rem var(--color-light);
+}
 
+/*cores*/
 body{
     background: var(--color-background);
     transition: background 0.5s;
@@ -45,7 +43,7 @@ body{
 
 /*cabeçalho*/
 header{
-    background: var(--color-background);
+    background: var(--color-white);
     transition: background 0.5s;
     box-shadow: var(--box-shadow);
 }
@@ -110,7 +108,8 @@ a{
     transition: all 0.3s ease-in-out;
 }
 section.info{
-    padding: 32px 5%;
+    padding: 32px;
+
 }
 section.about{
     display: flex;
@@ -119,17 +118,12 @@ section.about{
     box-shadow: var(--box-shadow);
 }
 section.about section.descricao{
-    width: 50%;
-    padding: 1rem 1.5rem;
-    text-align: center;
-}
-section.about section.foto{
-    width: 50%;
+    width: 70%;
     padding: 1rem 1.5rem;
     text-align: center;
 }
 section.about section.descricao h1{
-    font-size: 100%;
+    font-size: 2.5rem;
     color: var(--textoPrimario);
     padding: 0 0 1rem 0;
 }
@@ -138,16 +132,21 @@ section.about section.descricao p{
     color: var(--textoSecundario);
     padding: 0 0 1rem;
 }
-section.about section.foto h1{
-    font-size: 100%;
-    color: var(--textoPrimario);
-    padding: 0 0 1rem;
+section.about section.foto{
+    width: 30%;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    position: relative;
+    height: 300px;
 }
-section.about section.foto h3{
-    font-size: 100%;
-    color: var(--textoSecundario);
-    padding: 0 0 1rem;
+
+section.about section.foto img{
+    height: 100%;
+    border-radius: 8px;
 }
+
+
+/* portifolio de projetos */
 section.cards{
     display: flex;
     padding: 32px;    
@@ -190,7 +189,7 @@ section.cards section.card button{
     font-size: 80%;
     font-weight: 800;
 }
-
+/* portifolio de projetos */
 
 @media (max-width:768px) {
     nav.navbar a.logo{
@@ -227,7 +226,6 @@ section.cards section.card button{
         transition: 0.3s;
         padding: 15px;
         transition: background-color 0.5s;
-        box-shadow: var(--box-shadow);
     }
     .nav-item{
         margin: 16px 0;
@@ -256,4 +254,21 @@ section.cards section.card button{
         font-size: 70%;
     }
 }
-/*cabeçalho*/
+
+@media(min-width:1400px){
+    section.info{
+        padding: 32px 0;
+    }
+    .header{
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+    .navbar{
+        border-radius: 32px;
+    }
+    .container{
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

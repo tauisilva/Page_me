@@ -1,33 +1,19 @@
 const hamburguer = document.querySelector(".hamburguer");
 const navMenu = document.querySelector(".nav-menu");
 
-const modoEscuro = document.querySelector("#modoEscuro");
+const modoClaro = document.querySelector("#modoClaro");
 const html  = document.querySelector("html");
 
-hamburguer.addEventListener("click", () =>{
+hamburguer.addEventListener("click", () =>{  
     hamburguer.classList.toggle('active');
     navMenu.classList.toggle('active');
-});
+})
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () =>{
+    hamburguer.classList.remove('active');
+    navMenu.classList.remove('active');
+}));
 
-modoEscuro.addEventListener("click", () =>{
+modoClaro.addEventListener("click", () =>{
 
-    html.classList.toggle("modoEscuro");
-});
-
-/*cards slider*/
- 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+    html.classList.toggle("modoClaro");
+})
