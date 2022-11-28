@@ -436,7 +436,9 @@ section.cards section.card button {
     section.about section.descricao h1 {
         font-size: 1.5rem;
     }
-
+    main.bodyCard section.tecnologias span{
+        padding: 5px 5px;
+    }
     section.cards section.card {
         margin-left: 0;
         margin-bottom: 32px;
