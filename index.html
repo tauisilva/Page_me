@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Taui Lima">
+    <meta name="description" content="Portifolio do desenvolvedor Front-End Taui Silva Lima">
+    <meta name="keywords" content="Portifolio, html, css, javascript, Front-End, desenvolvedor">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,21 +19,23 @@
 </head>
 
 <body class="body">
-    <div class="main container">
+    <div class="container">
         <header class="header">
             <div class="container">
                 <nav class="navbar">
-                    <a href="#" class="logo">Dev Front</a>
+                    <a href="#homepage" class="logo">
+                        < TSL />
+                    </a>
                     <ul class="nav-menu">
-                        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                        <li class="nav-item"><a href="#homepage" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#info" class="nav-link">Sobre</a></li>
+                        <li class="nav-item"><a href="#projetos" class="nav-link">Projetos</a></li>
                     </ul>
                     <ul class="icones">
                         <div class="darkIcon">
                             <li class="icon" id="modoClaro"></li>
                         </div>
-    
+
                         <div class="hamburguer">
                             <span class="bar"></span>
                             <span class="bar"></span>
@@ -39,49 +44,93 @@
                     </ul>
                 </nav>
             </div>
-
         </header>
-        <section class="info">
-            <section class="container about">
-                <section class="descricao">
-                    <h1 class="nome">Taui Silva Lima</h1>
-                    <p class="sobre">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam nobis neque omnis
-                        rerum aliquid quidem atque aspernatur sunt perferendis minima consequatur assumenda beatae,
-                        velit
-                        similique veniam. Eum esse similique vitae?</p>
+        <div class="main">
+            <section class="homepage" id="homepage">
+                <section class="container apresentacao">
+                    <section class="leftAP">
+                        <h2>Olá, Eu sou</h2>
+                        <h1>Taui silva Lima</h1>
+                        <h2><b>Desenvolvedor</b> front-end</h2>
+                        <section class="redes">
+                            <a href="https://github.com/tauisilva"><button>
+                                    <h2><i class="fa-brands fa-github"></i> Github</h2>
+                                </button></a>
+                            <a href="https://linkedin.com/in/taui-silva"><button>
+                                    <h2><i class="fa-brands fa-linkedin-in"></i> Linkedin</h2>
+                                </button></a>
+                        </section>
+                    </section>
+                    <picture class="rightAP">
+                        <img src="img/Coding-bro.svg" alt="">
+                    </picture>
                 </section>
-                <section class="foto">
-                    <img src="img/profile.png" alt="">
+            </section>
+            <section class="info" id="info">
+                <section class="container about">
+                    <section class="descricao">
+                        <h1 class="titulo">Sobre Mim</h1>
+                        <p class="sobre">Em breve </p>
+                    </section>
+                    <picture class="foto">
+                        <img src="img/profile.png" alt="">
+                    </picture>
                 </section>
             </section>
-        </section>
-        <section class="cards">
-            <section class="card">
-                <img src="" alt="">
-                <h3>Araujo Micro</h3>
-                <span>Site de apresentação para loja de manutenção em Micros utilizando HTML, CSS e Bootstrap</span>
-                <a href="https://araujomicro.netlify.app/"><button class="button">Visualizar</button></a>
+            <section class="cards" id="projetos">
+                <section class="card">
+                    <section class="imgCard">
+                        <img src="img/projetos/araujomicro.png" alt="">
+                    </section>
+                    <main class="bodyCard">
+                        <h3>Araujo Micro</h3>
+                        <p>Site desenvolvido para uma loja de manutenção em Micros!</p>
+                        <section class="tecnologias">
+                            <span><i class="fa-brands fa-html5"></i> HTML</span>
+                            <span><i class="fa-brands fa-css3"></i> css</span>
+                            <span><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                        </section>
+                    </main>
+                    <footer class="footerCard">
+                        <a href="https://araujomicro.netlify.app/"><button> Visualizar</button></a> 
+                    </footer> 
+                </section>
+                <section class="card">
+                    <section class="imgCard">
+                        <img src="img/projetos/firmware.svg" alt="">
+                    </section>
+                    <main class="bodyCard">
+                        <h3>Em Desenvolvimento</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit culpa impedit dicta, quis
+                            provident
+                            voluptates blanditiis ducimus sapiente obcaecati nobis rem nostrum ipsum saepe atque est
+                            cumque
+                            fugiat
+                            amet possimus!</p>
+                    </main>
+                    <footer class="footerCard">
+                        <button>Visualizar</button>
+                    </footer> 
+                </section>
+                <section class="card">
+                    <section class="imgCard">
+                        <img src="img/projetos/firmware.svg" alt="">
+                    </section>
+                    <main class="bodyCard">
+                        <h3>Em Desenvolvimento</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit culpa impedit dicta, quis
+                            provident
+                            voluptates blanditiis ducimus sapiente obcaecati nobis rem nostrum ipsum saepe atque est
+                            cumque
+                            fugiat
+                            amet possimus!</p>
+                    </main>
+                    <footer class="footerCard">
+                        <button>Visualizar</button>
+                    </footer> 
+                </section>
             </section>
-            <section class="card">
-                <img src="" alt="">
-                <h3>Nome</h3>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit culpa impedit dicta, quis provident
-                    voluptates blanditiis ducimus sapiente obcaecati nobis rem nostrum ipsum saepe atque est cumque
-                    fugiat
-                    amet possimus!</span>
-                <button>Visualizar</button>
-            </section>
-            <section class="card">
-                <img src="" alt="">
-                <h3>Nome</h3>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit culpa impedit dicta, quis provident
-                    voluptates blanditiis ducimus sapiente obcaecati nobis rem nostrum ipsum saepe atque est cumque
-                    fugiat
-                    amet possimus!</span>
-                <button>Visualizar</button>
-            </section>
-        </section>
-
+        </div>
     </div>
 
 

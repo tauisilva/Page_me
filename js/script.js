@@ -14,6 +14,5 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 }));
 
 modoClaro.addEventListener("click", () =>{
-
     html.classList.toggle("modoClaro");
 })
