@@ -22,10 +22,10 @@
 }
 
 .modoClaro:root {
-
     --fundo: #FFF;
     --textoPrimario: #262626;
     --textoSecundario: #ACACAC;
+    --textoBlue:#102754;
     --primeiroPlano: #FFF;
     --color-background: #f6f6f9;
     --color-white: #fff;
@@ -90,7 +90,7 @@ a {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: var(--textoSecundario);
+    background-color: var(--color-dark);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -100,7 +100,7 @@ a {
 .icon::before {
     content: "\f186";
     font-family: fontAwesome;
-    color: var(--textoPrimario);
+    color: var(--color-white);
     font-size: 20px;
     transition: background 0.5s;
 }
@@ -228,7 +228,7 @@ section.about picture.foto {
 
 section.about picture.foto img {
     height: 100%;
-    height: 100%;
+    width: 100%;
     padding: 8px;
     object-fit: cover;
 }
@@ -449,7 +449,7 @@ section.cards section.card button {
     }
 }
 
-@media(min-width:1400px) {
+@media(min-width:1024px) {
     section.info {
         padding: 32px 0;
     }
@@ -467,5 +467,11 @@ section.cards section.card button {
         max-width: 1320px;
         margin-left: auto;
         margin-right: auto;
+    }
+    section.leftAP section.redes h2{
+        font-size: 2vh;
+    }
+    section.leftAP section.redes a{
+        padding: 1vh;
     }
 }
