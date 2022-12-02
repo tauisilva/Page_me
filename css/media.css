@@ -1,0 +1,203 @@
+/* Celulares */
+@media (max-width:768px){
+    .header {
+        position: fixed;
+        width: 100%;
+    }
+
+    nav.navbar a.logo {
+        font-size: 1.5rem;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    ul.icones {
+        display: flex;
+    }
+
+    ul.icones li.icon {
+        margin-right: 1rem;
+    }
+
+    .nav-menu {
+        position: absolute;
+        right: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: var(--color-white);
+        text-align: center;
+        flex-direction: column;
+        width: 30%;
+        transition: 0.3s;
+        padding: 15px;
+        transition: background-color 0.5s;
+        box-shadow: var(--box-shadow);
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .main {
+        padding-top: 70px;
+    }
+
+    section.apresentacao,
+    section.about,
+    section.cards {
+        flex-direction: column;
+    }
+
+    section.about section.descricao,
+    section.about picture.foto,
+    section.apresentacao section.leftAP,
+    section.cards section.card{
+        width: 100%;
+    }
+
+    section.apresentacao {
+        min-height: auto;
+    }
+
+    section.apresentacao section.leftAP {
+        text-align: center;
+    }
+
+    section.apresentacao section.leftAP h2,
+    b {
+        font-size: 1rem;
+    }
+
+    section.apresentacao section.leftAP h1 {
+        font-size: 2rem;
+        padding: 3rem 0;
+    }
+
+    section.apresentacao picture.rightAP {
+        display: none;
+    }
+
+    section.descricao {
+        order: 2;
+    }
+
+    section.about picture.foto {
+        height: 200px;
+        padding: 10px 0 0;
+    }
+
+    section.about picture.foto img {
+        border-radius: 50%;
+        object-fit: cover;
+        width: auto;
+        height: 100%;
+        box-shadow: var(--box-shadow);
+    }
+
+    section.about section.descricao h1 {
+        font-size: 1.5rem;
+    }
+    main.bodyCard section.tecnologias span{
+        padding: 5px 5px;
+        font-size: 10px;
+    }
+    main.bodyCard section.tecnologias i{
+        padding: 0 10PX ;
+    }
+    section.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    section.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Tablet */
+
+@media(max-width:1200px){
+    section.homepage {
+        padding: 0;
+    }
+    section.homepage section.apresentacao{
+        flex-direction: column;
+        justify-content: center;
+    }
+    section.apresentacao section.leftAP h1{
+        font-size: 2vh;
+    }
+    section.apresentacao section.leftAP b,
+    section.apresentacao section.leftAP h2{
+        font-size: 1.5vh;
+    }
+    section.leftAP section.redes h2{
+        font-size: 1vh;
+    }
+    section.leftAP section.redes a{
+        padding: 1vh;
+    }
+    section.apresentacao section.leftAP{
+        order: 2;
+    }
+    section.apresentacao picture.rightAP{
+        display: none;
+    }
+}
+
+/* Pc */
+@media(min-width:1400px){
+
+    .container {
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    section.info {
+        padding: 32px 0;
+    }
+
+    .header {
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+
+    .navbar {
+        border-radius: 32px;
+    }
+
+    section.apresentacao{
+        min-height: auto;
+
+    }
+    section.apresentacao section.leftAP h1,
+    section.apresentacao section.leftAP h2,
+    section.apresentacao section.leftAP b{
+        font-size: 3vh;
+    }
+    section.leftAP section.redes h2{
+        font-size: 30px;
+    }
+    section.leftAP section.redes a{
+        padding: 1vh;
+    }
+}
