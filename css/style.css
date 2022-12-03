@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     text-decoration: none;
+    /* border: 1px solid red; */
 }
 
 /*cores*/
@@ -139,18 +140,28 @@ section.apresentacao section.leftAP {
 }
 
 section.apresentacao section.leftAP h2 {
-    font-size: 5vh;
+    font-size: 4vh;
     color: var(--textoSecundario);
 }
 
-section.apresentacao section.leftAP h1,
-b {
+section.apresentacao section.leftAP h1{
     font-size: 5vh;
+    text-align: center;
+}
+section.apresentacao section.leftAP span {
+    font-size: 4vh;
+    text-align: center;
+}
+section.apresentacao section.leftAP h1,
+span {    
     color: var(--textoPrimario);
+}
+section.apresentacao section.leftAP span {
+    padding-left: 1vh;
 }
 
 section.apresentacao section.leftAP h1 {
-    padding: 3rem 0;
+    padding: 10% 0;
 }
 
 section.leftAP section.redes {
@@ -193,29 +204,7 @@ section.info {
     padding: 32px;
 }
 
-section.about {
-    display: flex;
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
-}
 
-section.about section.descricao {
-    width: 70%;
-    padding: 1rem 1.5rem;
-    text-align: center;
-}
-
-section.about section.descricao h1 {
-    font-size: 2.5rem;
-    color: var(--textoPrimario);
-    padding: 0 0 1rem 0;
-}
-
-section.about section.descricao p {
-    font-size: 100%;
-    color: var(--textoSecundario);
-    padding: 0 0 1rem;
-}
 
 section.about picture.foto {
     width: 30%;
@@ -231,7 +220,43 @@ section.about picture.foto img {
     padding: 8px;
     object-fit: cover;
 }
+section.about {
+    display: flex;
+    border-radius: 8px;
+}
 
+section.about section.descricao {
+    width: 70%;
+    padding: 1rem 1.5rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 25px;
+}
+section.about section.descricao h1 {
+    font-size: 2.5rem;
+    color: var(--textoPrimario);
+    padding: 0 0 1rem 0;
+}
+
+section.about section.descricao p {
+    font-size: 100%;
+    color: var(--textoSecundario);
+    padding: 0 0 1rem;
+}
+
+section.about section.tecnologias{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+section.about section.tecnologias span{
+    box-shadow: var(--box-shadow);
+    border-radius: 50px;
+    font-size: 15px;
+    color: var(--textoPrimario);
+    padding: 5px 15px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
 
 /* portifolio de projetos */
 section.cards {
@@ -239,26 +264,26 @@ section.cards {
     display: flex;
     padding: 32px;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 section.cards section.card{
     width: 500px;
     display: flex;
+    height: auto;
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
     margin-left: 32px;
+    margin-bottom: 2rem;
     overflow: hidden;
     background-color: var(--color-background);
     box-shadow: var(--box-shadow);
 }
-section.cards section.card:first-child {
-    margin-left: 0;
-}
 
 section.card section.imgCard {
     width: 100%;
-    height: 200px;
+    height: 150px;
     text-align: center;
     border-radius: 8px 8px 0 0;
 }
@@ -270,15 +295,17 @@ section.card section.imgCard img {
 }
 section.card main.bodyCard{
     width: 100%;
-    height: 50%;
+    height: auto;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 main.bodyCard section.tecnologias{
+    height: auto;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 main.bodyCard section.tecnologias span{
     box-shadow: var(--box-shadow);
@@ -287,6 +314,7 @@ main.bodyCard section.tecnologias span{
     color: var(--textoPrimario);
     padding: 5px 15px;
     text-transform: uppercase;
+    margin: 0.5rem 0 0 0;
 }
 section.cards section.card h3 {
     font-size: 100%;
@@ -302,6 +330,7 @@ section.cards section.card p {
     color: var(--textoSecundario);
 }
 section.cards footer.footerCard{
+    height: auto;
     padding: 1.5rem;
 }
 section.cards section.card button {

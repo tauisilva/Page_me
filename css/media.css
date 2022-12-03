@@ -95,9 +95,13 @@
     section.apresentacao picture.rightAP {
         display: none;
     }
-
-    section.descricao {
+    section.about {
+        box-shadow: var(--box-shadow);
+        border-radius: 25px;
+    }
+    section.about section.descricao {
         order: 2;
+        box-shadow: none;
     }
 
     section.about picture.foto {
@@ -127,10 +131,6 @@
         margin-left: 0;
         margin-bottom: 32px;
     }
-
-    section.cards section.card:last-child {
-        margin-bottom: 0;
-    }
 }
 
 /* Tablet */
@@ -140,27 +140,21 @@
         padding: 0;
     }
     section.homepage section.apresentacao{
-        flex-direction: column;
         justify-content: center;
     }
     section.apresentacao section.leftAP h1{
         font-size: 2vh;
     }
-    section.apresentacao section.leftAP b,
+    section.apresentacao section.leftAP span,
     section.apresentacao section.leftAP h2{
-        font-size: 1.5vh;
+        font-size: 25px;
     }
     section.leftAP section.redes h2{
         font-size: 1vh;
     }
-    section.leftAP section.redes a{
-        padding: 1vh;
-    }
     section.apresentacao section.leftAP{
         order: 2;
-    }
-    section.apresentacao picture.rightAP{
-        display: none;
+        text-align: center;
     }
 }
 
@@ -191,8 +185,8 @@
     }
     section.apresentacao section.leftAP h1,
     section.apresentacao section.leftAP h2,
-    section.apresentacao section.leftAP b{
-        font-size: 3vh;
+    section.apresentacao section.leftAP span{
+        font-size: 2vh;
     }
     section.leftAP section.redes h2{
         font-size: 30px;
