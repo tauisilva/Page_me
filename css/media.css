@@ -1,5 +1,26 @@
+@media (min-width: 700px) {
+    section.cards section.card {
+        flex-basis: calc(calc(100% / 3) - 20px);
+    }
+
+    section.cards section.card:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: 1100px) {
+    section.cards section.card {
+        flex-basis: calc(25% - 30px);
+    }
+
+    section.cards section.card:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
 /* Celulares */
-@media (max-width:768px){
+
+@media (max-width:768px) {
     .header {
         position: fixed;
         width: 100%;
@@ -9,7 +30,7 @@
         font-size: 1.5rem;
     }
 
-    .hamburguer {
+    .navbar .hamburguer {
         display: block;
     }
 
@@ -62,15 +83,13 @@
     }
 
     section.apresentacao,
-    section.about,
-    section.cards {
+    section.about {
         flex-direction: column;
     }
 
     section.about section.descricao,
     section.about picture.foto,
-    section.apresentacao section.leftAP,
-    section.cards section.card{
+    section.apresentacao section.leftAP {
         width: 100%;
     }
 
@@ -95,15 +114,20 @@
     section.apresentacao picture.rightAP {
         display: none;
     }
+
     section.about {
         box-shadow: var(--box-shadow);
         border-radius: 25px;
     }
+
     section.about section.descricao {
         order: 2;
         box-shadow: none;
+        align-items: center ;
     }
-
+    section.about section.descricao button {
+        margin: 1rem;
+    }
     section.about picture.foto {
         height: 200px;
         padding: 10px 0 0;
@@ -120,52 +144,56 @@
     section.about section.descricao h1 {
         font-size: 1.5rem;
     }
-    main.bodyCard section.tecnologias span{
+    section.cards section.card {
+        margin-bottom: 30px;
+    }
+    main.bodyCard section.tecnologias span {
         padding: 5px 5px;
         font-size: 10px;
     }
-    main.bodyCard section.tecnologias i{
-        padding: 0 10PX ;
-    }
-    section.cards section.card {
-        margin-left: 0;
-        margin-bottom: 32px;
+
+    main.bodyCard section.tecnologias i {
+        padding: 0 10PX;
     }
 }
 
 /* Tablet */
 
-@media(max-width:1200px){
+@media(max-width:1200px) {
+
+
     section.homepage {
         padding: 0;
     }
-    section.homepage section.apresentacao{
+
+    section.homepage section.apresentacao {
         justify-content: center;
     }
-    section.apresentacao section.leftAP h1{
-        font-size: 2vh;
-    }
+
     section.apresentacao section.leftAP span,
-    section.apresentacao section.leftAP h2{
+    section.apresentacao section.leftAP h2 {
         font-size: 25px;
     }
-    section.leftAP section.redes h2{
+
+    section.leftAP section.redes h2 {
         font-size: 1vh;
     }
-    section.apresentacao section.leftAP{
+
+    section.apresentacao section.leftAP {
         order: 2;
         text-align: center;
     }
 }
 
 /* Pc */
-@media(min-width:1400px){
+@media(min-width:1400px) {
 
     .container {
         max-width: 1320px;
         margin-left: auto;
         margin-right: auto;
     }
+
     section.info {
         padding: 32px 0;
     }
@@ -179,19 +207,24 @@
         border-radius: 32px;
     }
 
-    section.apresentacao{
+    section.apresentacao {
         min-height: auto;
 
     }
+
     section.apresentacao section.leftAP h1,
     section.apresentacao section.leftAP h2,
-    section.apresentacao section.leftAP span{
+    section.apresentacao section.leftAP span {
         font-size: 2vh;
     }
-    section.leftAP section.redes h2{
+
+    section.leftAP section.redes h2 {
         font-size: 30px;
     }
-    section.leftAP section.redes a{
+
+    section.leftAP section.redes a {
         padding: 1vh;
     }
+
+
 }
