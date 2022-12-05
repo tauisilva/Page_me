@@ -242,10 +242,13 @@ section.about section.descricao h1 {
     padding: 0 0 1rem 0;
 }
 
-section.about section.descricao p {
+section.about section.descricao p,span {
     font-size: 100%;
     color: var(--textoSecundario);
     padding: 0 0 1rem;
+}
+section.about section.descricao strong{
+    color: var(--textoPrimario);
 }
 section.about section.descricao #mostrar{
     display: none;
