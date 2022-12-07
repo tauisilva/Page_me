@@ -212,10 +212,9 @@
 
     }
 
-    section.apresentacao section.leftAP h1,
     section.apresentacao section.leftAP h2,
     section.apresentacao section.leftAP span {
-        font-size: 2vh;
+        font-size: 2.5vh;
     }
 
     section.leftAP section.redes h2 {
