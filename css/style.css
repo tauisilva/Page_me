@@ -265,7 +265,7 @@ section.about section.descricao button {
     box-shadow: var(--box-shadow);
     background: var(--color-background);
     color: var(--textoPrimario);
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 section.about section.tecnologias {
     display: flex;
