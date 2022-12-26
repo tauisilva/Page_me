@@ -114,7 +114,9 @@
     section.apresentacao picture.rightAP {
         display: none;
     }
-
+    section.info {
+        padding: 1rem 0;
+    }
     section.about {
         border-radius: 25px;
     }
