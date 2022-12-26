@@ -44,7 +44,7 @@ body {
 
 /*cabeçalho*/
 header {
-    background: var(--color-white);
+    background: var(--color-background);
     transition: background 0.5s;
     box-shadow: var(--box-shadow);
 }
@@ -176,7 +176,7 @@ section.leftAP section.redes a {
     display: flex;
     box-shadow: 0 0 2rem 0 var(--color-light);
     justify-content: space-evenly;
-    padding: 2vh;
+    padding: 1vh;
     cursor: pointer;
 }
 
@@ -186,7 +186,7 @@ section.leftAP section.redes button {
 
 section.leftAP section.redes h2 {
     color: var(--textoPrimario);
-    font-size: 3vh;
+    font-size: 2rem;
 }
 
 section.apresentacao picture.rightAP {
@@ -209,7 +209,6 @@ section.about picture.foto {
     padding: 1rem 1.5rem;
     text-align: center;
     height: 300px;
-    overflow: hidden;
 }
 
 section.about picture.foto img {
@@ -229,7 +228,6 @@ section.about {
 section.about section.descricao {
     width: 70%;
     padding: 1rem 1.5rem;
-    box-shadow: var(--box-shadow);
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -242,6 +240,12 @@ section.about section.descricao h1 {
     padding: 0 0 1rem 0;
 }
 
+section.about section.descricao section.sobre{
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
 section.about section.descricao p,
 section.about section.descricao span{
     font-size: 100%;
@@ -255,7 +259,7 @@ section.about section.descricao #mostrar{
     display: none;
 }
 section.about section.descricao button {
-    width: 150px;
+    width: 110px;
     height: 30px;
     text-transform: uppercase;
     border-radius: 32px;
@@ -270,16 +274,17 @@ section.about section.descricao button {
 section.about section.tecnologias {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
+    box-shadow: 1rem 1rem 2rem var(--color-light);
+    border-radius: 1rem;
 }
 
 section.about section.tecnologias span {
-    margin-bottom: 1rem;
-    box-shadow: var(--box-shadow);
     border-radius: 50px;
     font-size: 10px;
     color: var(--textoPrimario);
-    padding: 5px 15px;
+    padding: 10px 15px;
     text-transform: uppercase;
 }
 
@@ -388,7 +393,7 @@ section.card footer.footerCard {
 }
 
 section.card footer.footerCard button {
-    padding: 1rem 3rem;
+    padding: 0.5rem 2rem;
     text-transform: uppercase;
     border-radius: 32px;
     cursor: pointer;
