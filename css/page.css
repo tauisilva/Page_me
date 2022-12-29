@@ -1,0 +1,370 @@
+@import url(../css/style.css);
+body{
+    background: var(--color-background);
+    transition: background 0.5s;
+    width: 100vw;
+    height: 100vh;
+}
+/*cabeçalho*/
+header {
+    background: var(--color-background);
+    transition: background 0.5s;
+    box-shadow: var(--box-shadow);
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+}
+
+.logo {
+    font-size: 2rem;
+}
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    color: var(--textoPrimario);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-menu .nav-link {
+    transition: 0.5s ease;
+}
+
+.nav-menu .nav-link:hover {
+    color: var(--textoSecundario);
+
+}
+
+.navbar .icones li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .icones li::before {
+    content: "\f186";
+    font-family: fontAwesome;
+    color: var(--color-white);
+    font-size: 20px;
+    transition: background 0.5s;
+}
+
+.navbar .hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar .hamburguer span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: var(--textoPrimario);
+    transition: all 0.3s ease-in-out;
+}
+
+section.homepage {
+    padding: 32px;
+}
+
+section.apresentacao {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    min-height: 60vh;
+    align-items: center;
+}
+
+section.apresentacao section.leftAP {
+    width: 50%;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+section.apresentacao section.leftAP h2 {
+    font-size: 4vh;
+    color: var(--textoSecundario);
+}
+
+section.apresentacao section.leftAP h1 {
+    font-size: 5vh;
+    text-align: center;
+}
+
+section.apresentacao section.leftAP span {
+    font-size: 4vh;
+    text-align: center;
+}
+
+section.apresentacao section.leftAP h1,
+span {
+    color: var(--textoPrimario);
+}
+
+section.apresentacao section.leftAP span {
+    padding-left: 1vh;
+}
+
+section.apresentacao section.leftAP h1 {
+    padding: 10% 0;
+}
+
+section.leftAP section.redes {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+
+section.leftAP section.redes a {
+    width: 45%;
+    border-radius: 15px;
+    display: flex;
+    box-shadow: 0 0 2rem 0 var(--color-light);
+    justify-content: space-evenly;
+    padding: 1vh;
+    cursor: pointer;
+}
+
+section.leftAP section.redes button {
+    background: var(--color-background);
+}
+
+section.leftAP section.redes h2 {
+    color: var(--textoPrimario);
+    font-size: 2rem;
+}
+
+section.apresentacao picture.rightAP {
+    width: 40%;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    height: auto;
+}
+
+section.apresentacao picture.rightAP img {
+    height: 100%;
+}
+
+section.info {
+    padding: 32px;
+}
+
+section.about picture.foto {
+    width: 30%;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    height: 300px;
+}
+
+section.about picture.foto img {
+    height: 100%;
+    width: auto;
+    padding: 8px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+}
+
+section.about {
+    display: flex;
+    border-radius: 8px;
+}
+
+section.about section.descricao {
+    width: 70%;
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+section.about section.descricao h1 {
+    font-size: 2.5rem;
+    color: var(--textoPrimario);
+    padding: 0 0 1rem 0;
+}
+
+section.about section.descricao section.sobre{
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+section.about section.descricao p,
+section.about section.descricao span{
+    font-size: 100%;
+    color: var(--textoSecundario);
+    padding: 0 0 1rem;
+}
+section.about section.descricao strong{
+    color: var(--textoPrimario);
+}
+section.about section.descricao #mostrar{
+    display: none;
+}
+section.about section.descricao button {
+    width: 110px;
+    height: 30px;
+    text-transform: uppercase;
+    border-radius: 32px;
+    cursor: pointer;
+    font-size: 100%;
+    font-weight: 800;
+    box-shadow: var(--box-shadow);
+    background: var(--color-background);
+    color: var(--textoPrimario);
+    margin-bottom: 10px;
+}
+section.about section.tecnologias {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 1rem 1rem 2rem var(--color-light);
+    border-radius: 1rem;
+}
+
+section.about section.tecnologias span {
+    border-radius: 50px;
+    font-size: 10px;
+    color: var(--textoPrimario);
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+/* portifolio de projetos */
+section.projetos{
+    margin-bottom: 2rem;
+}
+section.cards {
+    width: auto;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin: 1rem 1rem 2rem;
+}
+section.cards::-webkit-scrollbar {
+    height: 12px;
+}
+
+section.cards::-webkit-scrollbar-thumb,
+section.cards::-webkit-scrollbar-track {
+    border-radius: 92px;
+}
+
+section.cards::-webkit-scrollbar-thumb {
+    background: var(--color-dark);
+}
+
+section.cards::-webkit-scrollbar-track {
+    background: var(--color-white);
+}
+section.cards section.card {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    flex: 0 0 100%;
+    border-radius: 15px;
+    background-color: var(--color-background);
+    box-shadow: var(--box-shadow);
+    scroll-snap-align: start;
+    transition: all 0.2s;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+section.cards section.card:not(:last-child) {
+    margin-right: 15px;
+}
+
+section.card section.imgCard {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+}
+
+section.card section.imgCard img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+section.card main.bodyCard {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main.bodyCard section.tecnologias {
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main.bodyCard section.tecnologias span {
+    box-shadow: var(--box-shadow);
+    border-radius: 50px;
+    font-size: 10px;
+    color: var(--textoPrimario);
+    padding: 5px 10px;
+    text-transform: uppercase;
+    margin: 0.5rem 0 0 0;
+}
+
+section.card main.bodyCard h3 {
+    font-size: 100%;
+    padding: 15px;
+    color: var(--textoPrimario);
+    text-align: center;
+}
+
+section.card main.bodyCard p {
+    margin: 16px;
+    font-weight: 400;
+    font-size: 100%;
+    color: var(--textoSecundario);
+}
+
+section.card footer.footerCard {
+    height: auto;
+    padding: 10px;
+}
+
+section.card footer.footerCard button {
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    cursor: pointer;
+    font-size: 100%;
+    font-weight: 800;
+    box-shadow: var(--box-shadow);
+    background: var(--color-background);
+    color: var(--textoPrimario);
+}
+
+/* portifolio de projetos */
