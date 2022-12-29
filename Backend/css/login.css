@@ -1,0 +1,149 @@
+@import url(../../css/style.css);
+
+section.container-login {
+    background: var(--color-background);
+    transition: background 0.5s;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.login-page {
+    width: 70%;
+    height: 600px;
+    display: flex;
+}
+
+section.left-login {
+    width: 60%;
+    height: 100%;
+    padding: 1rem;
+}
+
+section.left-login img {
+    width: 100%;
+    height: 80%;
+}
+
+section.right-login {
+    width: 40%;   
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    border-radius: 15px;
+    transition: box-shadow 0.5s;
+}
+section.right-login .darkIcon {
+    width: 100%;
+}
+
+section.right-login  .darkIcon li {
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.right-login .darkIcon li::before {
+    content: "\f186";
+    font-family: fontAwesome;
+    color: var(--color-white);
+    font-size: 20px;
+    transition: background 0.5s;
+}
+section.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+section.card section.card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+}
+section.card section.card-header h1 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: var(--textoPrimario);
+}
+
+section.card section.card-header img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+section.card section.card-body {
+    height: 200px;
+}
+
+section.card section.card-body form {
+    display: flex;
+    flex-direction: column;
+    color: var(--textoSecundario);
+}
+section.card section.card-body label{
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+section.card section.card-body input{
+    border-radius: 5px;
+    background: none;
+    color: var(--textoPrimario);
+    height: 2.5rem;
+    box-shadow: var(--box-shadow);
+    padding-left: 10px;
+    font-size: 1rem;
+}
+section.card section.card-body input::before{
+    background: none;
+}
+section.card section.card-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+section.card section.card-footer button{
+    cursor: pointer;
+    width: 250px;
+    height: auto;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    box-shadow: var(--box-shadow);
+    color: var(--textoPrimario);
+    padding: 0.3rem;
+    text-transform: uppercase;
+}
+@media (max-width: 768px){
+    section.login-page {
+        width: 100%;
+        padding: 1rem;
+    }
+    section.left-login {
+        display: none;
+    }
+    section.right-login{
+        width: 100%;
+    }
+}
+@media(min-width: 1400px){
+    section.login-page {
+        max-width: 1320px;
+    }
+}

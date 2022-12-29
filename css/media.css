@@ -1,3 +1,4 @@
+@import url(../css/style.css);
 @media (min-width: 700px) {
     section.cards section.card {
         flex-basis: calc(calc(100% / 3) - 20px);
