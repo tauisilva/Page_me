@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/page.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="Backend/css/login.css">
     <title>Taui Silva</title>
 </head>
 
@@ -24,7 +25,7 @@
         <header class="header">
             <div class="container">
                 <nav class="navbar">
-                    <a href="Backend/login.html" class="logo">
+                    <a class="logo">
                         < TSL />
                     </a>
                     <ul class="nav-menu">
@@ -75,12 +76,16 @@
                     <section class="descricao">
                         <h1>Sobre Mim</h1>
                         <section class="sobre">
-                            <p>Olá! Trabalho há 8 anos como técnico em manutenção de micros.<span id="pontos">..</span> <span id="mostrar">Buscando deixar a
-                                parte do hardware e focar mais na parte de software me formei em <strong>Análise e
-                                    Desenvolvimento de Sistemas - ADS(2019-2020)</strong> pela <strong>UDF</strong>. Mas não
-                                consegui seguir adiante e continuei como técnico. Em 2022 voltei para ficar de vez por isso
-                                estou cursando <strong>Ciência da Computação - UDF</strong> e continuar meus estudos, tendo
-                                o foco em estar em constante aprendizado!</span></p>                    
+                            <p>Olá! Trabalho há 8 anos como técnico em manutenção de micros.<span id="pontos">..</span>
+                                <span id="mostrar">Buscando deixar a
+                                    parte do hardware e focar mais na parte de software me formei em <strong>Análise e
+                                        Desenvolvimento de Sistemas - ADS(2019-2020)</strong> pela <strong>UDF</strong>.
+                                    Mas não
+                                    consegui seguir adiante e continuei como técnico. Em 2022 voltei para ficar de vez
+                                    por isso
+                                    estou cursando <strong>Ciência da Computação - UDF</strong> e continuar meus
+                                    estudos, tendo
+                                    o foco em estar em constante aprendizado!</span></p>
                             <button onclick="leiaMais()" id="bntLeiaMais">Leia Mais</button>
                         </section>
                         <section class="tecnologias">
@@ -91,88 +96,111 @@
                             <span><i class="fa-solid fa-code"> C++</i></span>
                             <span><i class="fa-brands fa-bootstrap"> Bootstrap</i></span>
                             <span><i class="fa-brands fa-angular"> Angular</i></span>
+                        </section>
                     </section>
                 </section>
-            </section>
-            <section class="projetos" id="projetos">
-                <section class="cards">
-                    <section class="card">
-                        <section class="imgCard">
-                            <img src="img/projetos/araujomicro.png" alt="">
-                        </section>
-                        <main class="bodyCard">
-                            <h3>Araujo Micro</h3>
-                            <p>Site desenvolvido para uma loja de manutenção em Micros!</p>
-                            <section class="tecnologias">
-                                <span><i class="fa-brands fa-html5"> HTML</i></span>
-                                <span><i class="fa-brands fa-css3"> css</i></span>
-                                <span><i class="fa-brands fa-bootstrap"> Bootstrap</i></span>
+                <section class="projetos" id="projetos">
+                    <section class="cards">
+                        <section class="card">
+                            <section class="imgCard">
+                                <img src="img/projetos/araujomicro.png" alt="">
                             </section>
-                        </main>
-                        <footer class="footerCard">
-                            <a href="https://araujomicro.netlify.app/"><button> Visualizar</button></a>
-                        </footer>
-                    </section>
-                    <section class="card">
-                        <section class="imgCard">
-                            <img  id="demonstracaoIM" src="img/projetos/paginadedemonstracao.png" alt="">
+                            <main class="bodyCard">
+                                <h3>Araujo Micro</h3>
+                                <p>Site desenvolvido para uma loja de manutenção em Micros!</p>
+                                <section class="tecnologias">
+                                    <span><i class="fa-brands fa-html5"> HTML</i></span>
+                                    <span><i class="fa-brands fa-css3"> css</i></span>
+                                    <span><i class="fa-brands fa-bootstrap"> Bootstrap</i></span>
+                                </section>
+                            </main>
+                            <footer class="footerCard">
+                                <a href="https://araujomicro.netlify.app/"><button> Visualizar</button></a>
+                            </footer>
                         </section>
-                        <main class="bodyCard">
-                            <h3>Pagina de Demonstração</h3>
-                            <p>Pagina para demonstração enquanto o projeto e Criado / Atualizado.</p>
-                            <section class="tecnologias">
-                                <span><i class="fa-brands fa-html5"> HTML</i></span>
-                                <span><i class="fa-brands fa-css3"> CSS</i></span>
-                                <span><i class="fa-brands fa-js"> Javascript</i></span>
+                        <section class="card">
+                            <section class="imgCard">
+                                <img id="demonstracaoIM" src="img/projetos/paginadedemonstracao.png" alt="">
                             </section>
-                        </main>
-                        <footer class="footerCard">
-                            <a href="https://pagina-demonstracao.netlify.app/"><button>Visualizar</button></a>
-                        </footer>
-                    </section>
-                    <section class="card">
-                        <section class="imgCard">
-                            <img src="img/projetos/firmware.svg" alt="">
+                            <main class="bodyCard">
+                                <h3>Pagina de Demonstração</h3>
+                                <p>Pagina para demonstração enquanto o projeto e Criado / Atualizado.</p>
+                                <section class="tecnologias">
+                                    <span><i class="fa-brands fa-html5"> HTML</i></span>
+                                    <span><i class="fa-brands fa-css3"> CSS</i></span>
+                                    <span><i class="fa-brands fa-js"> Javascript</i></span>
+                                </section>
+                            </main>
+                            <footer class="footerCard">
+                                <a href="https://pagina-demonstracao.netlify.app/"><button>Visualizar</button></a>
+                            </footer>
                         </section>
-                        <main class="bodyCard">
-                            <h3><i class="fa-solid fa-gears"></i> Construindo</h3>
-                            <p>Projeto em desenvolvimento, Aguarde!!!</p>
-                            <section class="tecnologias">
-                                <span><i class="fa-solid fa-gears"> Em breve</i></span>
-                                <span><i class="fa-solid fa-gears"> Em breve</i></span>
-                                <span><i class="fa-solid fa-gears"> Em breve</i></span>
+                        <section class="card">
+                            <section class="imgCard">
+                                <img src="img/projetos/firmware.svg" alt="">
                             </section>
-                        </main>
-                        <footer class="footerCard">
-                            <a href="https://pagina-demonstracao.netlify.app/"><button>Visualizar</button></a>
-                        </footer>
-                    </section>
-                    <section class="card">
-                        <section class="imgCard">
-                            <img src="img/projetos/firmware.svg" alt="">
+                            <main class="bodyCard">
+                                <h3><i class="fa-solid fa-gears"></i> Construindo</h3>
+                                <p>Projeto em desenvolvimento, Aguarde!!!</p>
+                                <section class="tecnologias">
+                                    <span><i class="fa-solid fa-gears"> Em breve</i></span>
+                                    <span><i class="fa-solid fa-gears"> Em breve</i></span>
+                                    <span><i class="fa-solid fa-gears"> Em breve</i></span>
+                                </section>
+                            </main>
+                            <footer class="footerCard">
+                                <a href="https://pagina-demonstracao.netlify.app/"><button>Visualizar</button></a>
+                            </footer>
                         </section>
-                        <main class="bodyCard">
-                            <h3><i class="fa-solid fa-gears"></i> Construindo</h3>
-                            <p>Projeto em desenvolvimento, Aguarde!!!</p>
-                            <section class="tecnologias">
-                                <span><i class="fa-solid fa-gears"> Em breve</i></span>
-                                <span><i class="fa-solid fa-gears"> Em breve</i></span>
-                                <span><i class="fa-solid fa-gears"> Em breve</i></span>
+                        <section class="card">
+                            <section class="imgCard">
+                                <img src="img/projetos/firmware.svg" alt="">
                             </section>
-                        </main>
-                        <footer class="footerCard">
-                            <a href="https://pagina-demonstracao.netlify.app/"><button>Visualizar</button></a>
-                        </footer>
+                            <main class="bodyCard">
+                                <h3><i class="fa-solid fa-gears"></i> Construindo</h3>
+                                <p>Projeto em desenvolvimento, Aguarde!!!</p>
+                                <section class="tecnologias">
+                                    <span><i class="fa-solid fa-gears"> Em breve</i></span>
+                                    <span><i class="fa-solid fa-gears"> Em breve</i></span>
+                                    <span><i class="fa-solid fa-gears"> Em breve</i></span>
+                                </section>
+                            </main>
+                            <footer class="footerCard">
+                                <a href="https://pagina-demonstracao.netlify.app/"><button>Visualizar</button></a>
+                            </footer>
+                        </section>
                     </section>
                 </section>
-            </section>
         </div>
+        <footer class="footer">
+            <section class="footer-content">
+                <h2>Desenvolvido by Taui &copy 2023</h2>
+            </section>
+            <section class="admin open-modal">
+                <img src="img/profile.png" alt="">
+            </section>
+        </footer>
     </div>
-    <footer>
-
-    </footer>
-
-
+    <section class="modal-container">
+        <section class="modal card">
+            <section class="card-header">
+                <img src="../img/profile.png" alt="">
+                <h1>Bem-Vindo</h1>
+            </section>
+            <section class="card-body">
+                <form action="POST">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                    <label for="senhaLogin">Senha</label>
+                    <input type="password" name="" id="senhaLogin">
+                </form>
+            </section>
+            <section class="card-footer">
+                <a href="https://pagina-demonstracao.netlify.app/"><button class="btn-login href id="btnLogin">Login</button></a>
+                
+            </section>
+        </section>
+    </section>
 </body>
 <script src="js/script.js"></script>
 

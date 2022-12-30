@@ -368,3 +368,73 @@ section.card footer.footerCard button {
 }
 
 /* portifolio de projetos */
+footer.footer{
+    width: 100%;
+    height: auto;
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+}
+footer.footer section.footer-content{
+    text-align: center;
+    color: var(--textoSecundario);
+    width: 90%;
+}
+footer.footer section.footer-content h2{
+    padding: 1rem;
+}
+footer.footer section.admin{
+    cursor: pointer;
+    background: var(--color-dark);
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    box-shadow: var(--box-shadow);
+}
+footer.footer section.admin img{
+    height:100%;
+    width: 100%;
+    border-radius: 50%;
+}
+/* modal */
+section.modal-container {
+    background: rgba(0, 0, 0, 0.2);    
+    width: 100%;
+    height: 100vh;    
+    position: fixed;
+    left: 0;
+    top: 0;    
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;    
+    transition: opacity 0.15s;
+  }
+  
+  section.modal {
+    background: var(--color-background);    
+    width: 0;
+    height: 0;    
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;    
+    transition: width 0.15s, height 0.15s;
+  }
+  
+  section.modal-show > .modal {
+    width: 500px;
+    height: auto;
+  }
+  
+  section.modal-show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+/* modal */
+
+
