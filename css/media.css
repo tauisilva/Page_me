@@ -157,6 +157,20 @@
     main.bodyCard section.tecnologias i {
         padding: 0 10PX;
     }
+    footer.footer section.footer-content h2{
+        font-size: 1rem;
+    }
+    section.modal-show > .modal {
+        width: auto;
+    }
+    section.modal section.modal-header h1 {
+        font-size: 1rem;
+    }
+    section.modal section.modal-header img {
+        margin-left: 1rem;
+        max-height: 100px;
+        max-width: 100px;
+    }
 }
 
 /* Tablet */
