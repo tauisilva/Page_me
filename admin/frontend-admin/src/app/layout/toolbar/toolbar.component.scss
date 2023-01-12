@@ -1,0 +1,24 @@
+mat-toolbar{
+
+    display: flex;
+    align-items: center;
+    background: none;
+    color: var(--textoPrimario);
+    min-height: 70px;
+    .spacer {
+        flex: 1 1 auto;
+    }
+    span{
+        font-size: 2rem;
+    }
+    a{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        background: var(--color-dark);
+        color: var(--color-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
